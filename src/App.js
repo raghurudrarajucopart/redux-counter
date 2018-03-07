@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { createStore } from 'redux';
 
-function rootReducer(state = {}, action) {
+function rootReducer(state = [], action) {
   switch (action.type) {
     case 'ADD-ONE':
     return state.concat('added one')
@@ -14,6 +14,8 @@ function rootReducer(state = {}, action) {
 }
 
 let store = createStore(rootReducer);
+
+class App extends Component {
 
   render() {
     return (
