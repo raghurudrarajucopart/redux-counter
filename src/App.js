@@ -21,8 +21,9 @@ class App extends Component {
     super()
     store.subscribe(() => {
       console.log(store.getState());
+      this.setState(store.getState())
     });
-    
+
     this.state = {
       value: 0,
     }
